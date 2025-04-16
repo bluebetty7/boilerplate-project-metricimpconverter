@@ -92,7 +92,7 @@ suite('Unit Tests', function(){
         test("For each Valid Unit Inputs", function (done) {
             let input = [ "gal", "l", "mi", "km", "lbs", "kg"];
             let expect = [ 
-                "gallon",
+                "gallons",
                 "liters",
                 "miles",
                 "kilometers",
@@ -109,7 +109,7 @@ suite('Unit Tests', function(){
         test("Gal to L", function (done) {
             let input = [ 5, "gal"];
             let expected = 18.9271;
-            assert.aproximatly(
+            assert.approximately(
             convertHandler.convert(input[0], input[1]),
             expected,
             0.1
@@ -119,7 +119,7 @@ suite('Unit Tests', function(){
         test("Lbs to Kg", function (done) {
             let input = [ 5, "lbs"];
             let expected = 2.26796;
-            assert.aproximatly(
+            assert.approximately(
             convertHandler.convert(input[0], input[1]),
             expected,
             0.1
@@ -128,8 +128,8 @@ suite('Unit Tests', function(){
         });
         test("Kg to Lbs", function (done) {
             let input = [ 5, "kg"];
-            let expected = 11.02312;
-            assert.aproximatly(
+            let expected = 11.02311;
+            assert.approximately(
             convertHandler.convert(input[0], input[1]),
             expected,
             0.1
